@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Verdana;
+    font-size: 4vw;
+}
+body {
+    margin: 0;
+    background: black;
+    color: white;
+}
+a {
+    color: #e0e0e0;
+}
+#pages {
+    position: absolute;
+    top: 0;
+    transition: top 500ms;
+}
+.page {
+    width: 100%;
+    overflow: hidden;
+}
+.page-inner {
+    padding: 1rem;
+}
+.page .header a {
+    text-decoration: none;
+}
+.page .screen-name {
+    color: gray;
+}
+.page .full-image {
+    width: 100%;
+}
+.page .ago {
+    float: right;
+}
+.page .header {
+    margin-bottom: 0.2em;
+}

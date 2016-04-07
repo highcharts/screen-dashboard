@@ -12,12 +12,13 @@ a {
 }
 #pages {
     position: absolute;
-    top: 0;
-    transition: top 500ms;
+    left: 0;
+    transition: left 500ms;
 }
 .page {
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
+    display: inline-block;
 }
 .page-inner {
     padding: 1rem;

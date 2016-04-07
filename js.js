@@ -40,12 +40,13 @@ function initTweets() {
 function initPages() {
 	var winHeight = $(window).height();
 	$('.page').height(winHeight);
+    $('#pages').width(($('.page').length + 1) + '00vw');
 
 	// Slide
     var i = 1;
     setInterval(function () {
     	$('#pages').css({
-        	top: -(i % $('.page').length) * winHeight
+        	left: -(i % $('.page').length) + '00vw'
         });
         
         i++;

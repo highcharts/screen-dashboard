@@ -44,6 +44,9 @@ body {
   max-width: 100%;
 }
 
+.info > .row {
+  padding: 20px 0;
+}
 
 
 .vertical-center {

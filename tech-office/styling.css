@@ -124,6 +124,17 @@ body {
   color: #FFFFFF;
 }
 
+/*
+ * Card
+ */
+.card.member {
+  color: #000000;
+  overflow: hidden;
+}
+
+.card.member img {
+  max-height: 200px;
+}
 
 /*
  * Affix and center

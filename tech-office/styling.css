@@ -33,8 +33,13 @@ body {
   overflow: hidden;
 }
 
-.card.member img {
+.card.member .card-img-top {
   max-height: 200px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.card.member .card-img-top img {
+  max-width: 100%;
 }
 
 

@@ -17,8 +17,11 @@ body,
 .cover,
 .cover-inner {
   height: 100%;
+  min-width: 460px;
+}
+
+img {
   max-width: 100%;
-  overflow: hidden;
 }
 
 body {

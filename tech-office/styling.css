@@ -36,12 +36,12 @@ body {
 }
 
 .card.member .card-img-top {
-  max-height: 200px;
-  max-width: 100%;
+  /*max-height: 200px;*/
+  /*max-width: 100%;*/
   overflow: hidden;
 }
 .card.member .card-img-top img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .info > .row {
@@ -57,4 +57,21 @@ body {
 }
 .vertical-bottom {
   align-self: flex-end;
+}
+
+.sixteen-nine {
+  position: relative;
+}
+.sixteen-nine:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+.sixteen-nine > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

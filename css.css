@@ -6,6 +6,7 @@ body {
     margin: 0;
     background: black;
     color: white;
+    transition: background 500ms;
 }
 a {
     color: #e0e0e0;

@@ -39,7 +39,12 @@ function initTweets() {
 
 function initPages() {
 	var winHeight = $(window).height();
-	$('.page').height(winHeight);
+    var colors = ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', 
+        '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'];
+    var colorCounter = -1;
+	
+
+    $('.page').height(winHeight);
     $('#pages').width(($('.page').length + 1) + '00vw');
 
 	// Slide
@@ -48,6 +53,9 @@ function initPages() {
     	$('#pages').css({
         	left: -(i % $('.page').length) + '00vw'
         });
+        $(document.body).css({
+            background: colors[colorCounter++ % colors.length]
+        })
         
         i++;
     }, 8000);

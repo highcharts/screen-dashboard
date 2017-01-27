@@ -21,7 +21,7 @@ a {
     display: inline-block;
 }
 .page-inner {
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
 .page .header a {
     text-decoration: none;

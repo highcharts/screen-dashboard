@@ -9,7 +9,7 @@ body {
     transition: background 500ms;
 }
 a {
-    color: #e0e0e0;
+    color: white;
 }
 #pages {
     position: absolute;
@@ -19,7 +19,7 @@ a {
 .page {
     width: 100vw;
     overflow: hidden;
-    display: inline-block;
+    float: left;
 }
 .page-inner {
     padding: 3rem 1rem;

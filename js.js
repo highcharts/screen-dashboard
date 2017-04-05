@@ -1,6 +1,8 @@
+var timer;
+
 function initTweets() {
     var $div = $('#pages');
-    $.each(tweets, function (i, tweet) {
+    $.each(tweets.slice(0, 6), function (i, tweet) {
 
         var date = Date.parse(tweet.created_at),
             currentDate = +new Date(),
@@ -23,7 +25,7 @@ function initTweets() {
 
 
         $div.append(
-            '<div class="page">' + 
+            '<div class="page tweet">' + 
             '<div class="page-inner">' + 
 
             '<div class="header">' +
@@ -37,11 +39,33 @@ function initTweets() {
     });
 }
 
+var colors = ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', 
+    '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
+    colorCounter = -1;
+
+/**
+ * Stop the slicer. Useful when debugging.
+ */
+function stop() {
+    clearInterval(timer);
+}
+
+/**
+ * Go to a page index
+ * @param  {number} i Page index
+ * @return {[type]}   [description]
+ */
+function goTo(i) {
+    $('#pages').css({
+        left: -(i % $('.page').length) + '00vw'
+    });
+    $(document.body).css({
+        background: colors[colorCounter++ % colors.length]
+    });
+}
+
 function initPages() {
 	var winHeight = $(window).height();
-    var colors = ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', 
-        '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'];
-    var colorCounter = -1;
 	
 
     $('.page').height(winHeight);
@@ -49,13 +73,8 @@ function initPages() {
 
 	// Slide
     var i = 1;
-    var slide = setInterval(function () {
-    	$('#pages').css({
-        	left: -(i % $('.page').length) + '00vw'
-        });
-        $(document.body).css({
-            background: colors[colorCounter++ % colors.length]
-        })
+    timer = setInterval(function () {
+    	goTo(i);
         
         i++;
     }, 8000);
@@ -67,7 +86,7 @@ function initPages() {
 
     $(window).click(function () {
         alert ('Sliding stopped. Refresh page to continue.');
-        clearInterval(slide);
+        stop();
     });
 }
 

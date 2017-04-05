@@ -49,7 +49,7 @@ function initPages() {
 
 	// Slide
     var i = 1;
-    setInterval(function () {
+    var slide = setInterval(function () {
     	$('#pages').css({
         	left: -(i % $('.page').length) + '00vw'
         });
@@ -64,6 +64,11 @@ function initPages() {
     setTimeout(function () {
     	window.location.reload();
     }, 15 * 60 * 1000); // 15 minutes
+
+    $(window).click(function () {
+        alert ('Sliding stopped. Refresh page to continue.');
+        clearInterval(slide);
+    });
 }
 
 $(function () {
